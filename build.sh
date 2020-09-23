@@ -1,2 +1,4 @@
-wget -nc https://download.docker.com/linux/static/stable/x86_64/docker-18.06.0-ce.tgz -O docker.tgz
-tar -xzvf docker.tgz
+RUN curl -fsSLO https://get.docker/builds/Linux/x86_64/docker-17.04.0-ce.tgz \
+  && tar xzvf docker-17.04.0-ce.tgz \
+  && mv docker/docker /usr/local/bin \
+  && rm -r docker docker-17.04.0-ce.tgz
