@@ -22,6 +22,7 @@ pipeline {
   stage("Build") {
    steps {
     script {
+     sh "./build.sh"
      sh "docker build -t ubuntuImage . "
     }
     
